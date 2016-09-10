@@ -1,0 +1,4 @@
+*.[jJ][pP][gG]
+Keys.py
+*.pyc
+__pycache__
