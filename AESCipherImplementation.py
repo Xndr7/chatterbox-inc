@@ -50,8 +50,8 @@ class AESCipher(object):
                 '''
                 return s + (self.bs - len(s) % self.bs) * chr(self.bs - len(s) % self.bs)
 
-        @staticmethod
-        def _unpad(s):
+        
+        def _unpad(self,s):
                 '''
                 - AESCipher._unpad() is responsible for unpadding the string passed.
                 - parameter passed is a padded string.
