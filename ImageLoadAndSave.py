@@ -8,9 +8,7 @@ def Load_Image(image_name):
     '''   
     image_file = open(image_name, "rb")
     image_as_string = image_file.read()
-    image = Image.open(image_name) 
-    width, height = image.size
-    return image_as_string, width, height
+    return image_as_string
 
 def Save_Image(image_name,param_string):
     '''
