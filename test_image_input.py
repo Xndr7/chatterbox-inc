@@ -17,16 +17,20 @@ def main():
     decc_server = aes_server.decrypt(encc_server)
     decc = aes.decrypt(decc_server.split(' ')[2])
     ImgFuncs.Save_Image("456.jpg",decc)
+    ImgFuncs.Save_Image("original.jpg",input_image)
+    #ImgFuncs.Save_Image("457.jpg",encc)
     print(len(encc))
     print(len(encc_server))
     print(len(decc_server))
-    #print(encc)
-    #print(encc_server)
-    #print(decc_server)
+    print("ENCRYPTED STRING: "+encc+"\n")
+    print("ENCRYPTED STRING TO SERVER: "+encc_server+"\n")
+    print("DECRYPTED STRING FROM SERVER: "+decc_server+"\n")
     if (input_image == decc):
         print("ok")
     else:
         print("Error")
+    if(encc!=decc):
+        print("Not same!")
 
 if __name__ == "__main__":
     main()
